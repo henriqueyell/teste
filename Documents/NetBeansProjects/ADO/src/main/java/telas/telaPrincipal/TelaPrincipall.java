@@ -5,6 +5,10 @@
  */
 package telas.telaPrincipal;
 
+import javax.swing.JFrame;
+import telas.telaProduto.TelaCadastroProduto;
+import telas.telaProduto.TelaConsultaProduto;
+
 /**
  *
  * @author Asus
@@ -16,7 +20,15 @@ public class TelaPrincipall extends javax.swing.JFrame {
      */
     public TelaPrincipall() {
         initComponents();
+
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
+    
+    
+    TelaCadastroProduto tCadastProd = null;
+    
+    TelaConsultaProduto tConsultarproduto = null;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,7 +39,34 @@ public class TelaPrincipall extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuConsuCadProd = new javax.swing.JMenuItem();
+        jMenuConsuCadProd1 = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jMenu2.setText("Produto");
+
+        jMenuConsuCadProd.setText("Cadastrar produto");
+        jMenuConsuCadProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsuCadProdActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuConsuCadProd);
+
+        jMenuConsuCadProd1.setText("Consultar produto");
+        jMenuConsuCadProd1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsuCadProd1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuConsuCadProd1);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,11 +76,34 @@ public class TelaPrincipall extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuConsuCadProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsuCadProdActionPerformed
+        if (tCadastProd == null || !tCadastProd.isDisplayable()) {
+            tCadastProd = new TelaCadastroProduto();
+            tCadastProd.pack();
+            tCadastProd.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            tCadastProd.setLocationRelativeTo(null);
+            tCadastProd.setVisible(true);
+        }
+        tCadastProd.toFront();
+    }//GEN-LAST:event_jMenuConsuCadProdActionPerformed
+
+    private void jMenuConsuCadProd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsuCadProd1ActionPerformed
+
+        if (tConsultarproduto == null || !tConsultarproduto.isDisplayable()) {
+            tConsultarproduto = new TelaConsultaProduto();
+            tConsultarproduto.pack();
+            tConsultarproduto.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            tConsultarproduto.setLocationRelativeTo(null);
+            tConsultarproduto.setVisible(true);
+        }
+        tConsultarproduto.toFront();
+    }//GEN-LAST:event_jMenuConsuCadProd1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,5 +142,9 @@ public class TelaPrincipall extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuConsuCadProd;
+    private javax.swing.JMenuItem jMenuConsuCadProd1;
     // End of variables declaration//GEN-END:variables
 }

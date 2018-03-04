@@ -7,9 +7,18 @@ public class ObjetoProduto {
     private String sNome;
     private String sTipoProd;
     private String sQuantidade;
-    private String sValor;
+    private String sValorVenda;
     private String sDesc;
     private boolean bStatus;
+    private String sValorCompra;
+
+    public String getsValorCompra() {
+        return sValorCompra;
+    }
+
+    public void setsValorCompra(String sValorCompra) {
+        this.sValorCompra = sValorCompra;
+    }
 
     public boolean isbStatus() {
         return bStatus;
@@ -61,11 +70,11 @@ public class ObjetoProduto {
     }
 
     public String getsValor() {
-        return sValor;
+        return sValorVenda;
     }
 
     public void setsValor(String fValor) {
-        this.sValor = fValor;
+        this.sValorVenda = fValor;
     }
     
 }
