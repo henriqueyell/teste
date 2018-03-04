@@ -2,7 +2,7 @@ package telas.telaProduto;
 
 import servico.ServicoProduto;
 import javax.swing.JOptionPane;
-import objetos.objetoNumero.Documento;
+import objetos.objetoNumeros.Documento;
 import objetos.objetoProduto.ObjetoProduto;
 
 public class TelaCadastroProduto extends javax.swing.JFrame {

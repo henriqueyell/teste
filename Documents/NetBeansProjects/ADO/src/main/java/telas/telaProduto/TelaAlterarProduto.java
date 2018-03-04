@@ -2,7 +2,7 @@ package telas.telaProduto;
 
 import servico.ServicoProduto;
 import javax.swing.JOptionPane;
-import objetos.objetoNumero.Documento;
+import objetos.objetoNumeros.Documento;
 import objetos.objetoProduto.ObjetoProduto;
 
 public class TelaAlterarProduto extends javax.swing.JFrame {
@@ -39,6 +39,7 @@ public class TelaAlterarProduto extends javax.swing.JFrame {
         jButtonCancelar = new javax.swing.JButton();
         jTextPreco = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
+        jTextPreco1 = new javax.swing.JFormattedTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -81,6 +82,8 @@ public class TelaAlterarProduto extends javax.swing.JFrame {
 
         jLabel7.setText("*Preço");
 
+        jTextPreco1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -100,7 +103,9 @@ public class TelaAlterarProduto extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextPreco1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(19, 19, 19)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -148,7 +153,9 @@ public class TelaAlterarProduto extends javax.swing.JFrame {
                     .addComponent(jTextPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextPreco1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jTextDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -240,6 +247,7 @@ public class TelaAlterarProduto extends javax.swing.JFrame {
     public javax.swing.JTextField jTextDesc;
     public javax.swing.JTextField jTextNomeProd;
     public javax.swing.JFormattedTextField jTextPreco;
+    public javax.swing.JFormattedTextField jTextPreco1;
     public javax.swing.JTextField jTextQuantidade;
     // End of variables declaration//GEN-END:variables
 }
