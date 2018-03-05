@@ -1,0 +1,41 @@
+- Componentes principais no computador:
+
+*CPU > ULA (Unidade Lógica e Aritmética), contém registradores que são unidades de armazenamento mais básico, há unidade de controle onde é executado as sequencias de instruções (programas) garantido o sincronismo (tempo) e a ordenação correta de cada passo.
+
+Registradores de instrução:
+Contador de programa - Programa Counter (PC) ou Instruction Pointer (IP)
+
+Para que a CPU chegue na memória é necessária passar pelo barramento, usando registradores sendo o MAR (memory Address Register) que fornece o endereço a ser acessado na memória e o MBR (memory Buffer Register) que é o dado lido ou o dado a ser escrito
+
+Processamento dos dados:
+Acumulador (AC)
+Registrador Temporário / Auxiliares
+Registrador de status / PSW (Program Status Word) / Flags (Indicadores Binários)
+
+*Memória > RAM e memória secundária, HD, memória flash, SSD
+*Gabinete
+
+*Sistema de Entrada e Saida > Controle de periféricos, comunicação com o usuário, comunicação com outros computadores, armazenamento de dados e interação com o ambiente
+
+*Barramento > Em barramento há vários tipos, o tipo dados, endereço e controle (dentro do controle há ações que são interrupção, leitura e escrita, reset e clock)
+A largura dos barramentos é a quantidade de vias, há endereços também 16 bits = 2^16 = 65536 = 64k posições (endereços)
+Há dados, cada posição armazena 8 bits = 1 byte (8)
+Capacidade (limite) da memória do computador é calculada por: quantidade de posições X tamanho da posição
+Exemplo: 64k posições x 1 byte = 64kbs
+
+Clock > Há ciclos, a frequência (f)  = ciclos por segundo (Hz)
+1 Hertz = 1 ciclo por segundo
+
+Período (t) = tempo de um ciclo (s)
+f = 1 / t
+
+f = 2,0 GHz
+
+t = 1 / f  - T = 0,5ns = 0,5 x 10^9 s = 0,0000000005 s
+
+-Funcionamento do Computador:
+
+*Um programa é uma sequência de instruções
+*Na instrução contém o código da operação (op code), que é o que deve ser feito com os...
+*Operações (dados) podendo ser caractere, numeral e etc.
+*
